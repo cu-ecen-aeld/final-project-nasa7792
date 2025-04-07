@@ -10,7 +10,8 @@
 - Raspberry pi bringup 
 
 ## Source Code Organization
-
+- Code for Sensor and motor driver will be hosted on https://github.com/cu-ecen-aeld/final-project-nasa7792
+- Code for network driver will be hosted on https://github.com/cu-ecen-aeld/final-project-AbhishekKoppaCU
 
 ## Group Overview
 Nalin Saxena <br>
