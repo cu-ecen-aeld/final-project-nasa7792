@@ -1,4 +1,4 @@
-# Motion Sensor-Based Appliance Control System
+# Raspberry Pi communication System
 
 ## Project Overview: 
 [Project Overview Wiki Page]https://github.com/cu-ecen-aeld/final-project-nasa7792/wiki/Final-project-Overview
