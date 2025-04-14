@@ -1,0 +1,2 @@
+source "$BR2_EXTERNAL_project_base_PATH/package/hello_package/Config.in"
+source "$BR2_EXTERNAL_project_base_PATH/package/test_gpio/Config.in"
