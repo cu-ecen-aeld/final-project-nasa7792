@@ -1,26 +1,26 @@
 
 ##############################################################
 #
-# HELLO_PACKAGE
+# VNCL
 #
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-HELLO_PACKAGE_VERSION = 'a92fc011d4ac1ef1f7b99202ab121dbe6a5bab5b'
+VNCL_VERSION = 'e3adb96ba37d3bd782088e4c1ef75f693b0b1c46'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
-HELLO_PACKAGE_SITE = 'git@github.com:nasa7792/AESD_FINAL_PROJECT_TRACKING.git'
-HELLO_PACKAGE_SITE_METHOD = git
-HELLO_PACKAGE_GIT_SUBMODULES = YES
+VNCL_SITE = 'git@github.com:nasa7792/AESD_FINAL_PROJECT_TRACKING.git'
+VNCL_SITE_METHOD = git
+VNCL_GIT_SUBMODULES = YES
 
-define HELLO_PACKAGE_BUILD_CMDS
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/hello_package all
+define VNCL_BUILD_CMDS
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/vncl40404 all
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
-define HELLO_PACKAGE_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/hello_package/hello $(TARGET_DIR)/usr/bin/hello
+define VNCL_INSTALL_TARGET_CMDS
+	$(INSTALL) -m 0755 $(@D)/vncl40404/vncl4040 $(TARGET_DIR)/usr/bin/vncl4040
 endef
 
-$(eval $(generic-package))
+$(eval $(generic-package)) 

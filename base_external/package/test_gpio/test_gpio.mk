@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-TEST_GPIO_VERSION = '4d24955436861b663fad351f71545eecea49e544'
+TEST_GPIO_VERSION = 'a92fc011d4ac1ef1f7b99202ab121dbe6a5bab5b'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
