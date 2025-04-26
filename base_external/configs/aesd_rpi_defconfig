@@ -28,7 +28,9 @@ BR2_PACKAGE_MPG123=y
 BR2_PACKAGE_BZIP2=y
 BR2_PACKAGE_XZ=y
 BR2_PACKAGE_FBV=y
+#addition for psplash for showing boot logo
 BR2_PACKAGE_PSPLASH=y
+#path for psplash image
 BR2_PACKAGE_PSPLASH_IMAGE="/home/nalin/Desktop/snow_tree.bmp"
 BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI=y
 BR2_PACKAGE_BRCMFMAC_SDIO_FIRMWARE_RPI_BT=y
