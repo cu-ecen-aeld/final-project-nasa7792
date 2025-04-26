@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_PINET_DRIVER
+	bool "pinet_driver"
+	help
+        pinet network Driver module 

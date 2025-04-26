@@ -1,0 +1,4 @@
+config BR2_PACKAGE_VNCL_NEW
+	bool "vncl_new"
+	help
+		adding vncl Drivers

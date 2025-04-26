@@ -1,0 +1,4 @@
+config BR2_PACKAGE_SERVO_TEST2
+	bool "servo_test2"
+	help
+		a test package for servo motor

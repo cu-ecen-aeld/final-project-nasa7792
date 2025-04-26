@@ -1,4 +1,0 @@
-config BR2_PACKAGE_VNCL
-	bool "vncl"
-	help
-		adding vncl Drivers
