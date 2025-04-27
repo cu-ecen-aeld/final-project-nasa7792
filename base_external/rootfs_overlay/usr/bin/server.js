@@ -1,49 +1,41 @@
+//resource-https://www.geeksforgeeks.org/how-to-run-node-js-server/
+//https://www.geeksforgeeks.org/node-js-fs-createreadstream-method/
+const http = require('http'); 
 const fs = require('fs');
-const http = require('http');
 
-const hostname = '0.0.0.0';
-const port = 8080;
-const pipePath = '/tmp/proxpipe';
+//pipe to read sensor values
+const fifoPath = '/tmp/proxpipe';
 
-let latestData = 'Waiting for sensor data...';
-let buffer = '';
 
-// Function to open and monitor the FIFO
-function openFifo() {
-  const stream = fs.createReadStream(pipePath, { encoding: 'utf8', flags: 'r+' });
+let latestData="Fetching value from Sensor"
 
-  stream.on('data', chunk => {
-    buffer += chunk;
-    let lines = buffer.split('\n');
-    buffer = lines.pop() || '';
-    if (lines.length > 0) {
-      latestData = lines[lines.length - 1].trim();
-      console.log('Received:', latestData);
-    }
-  });
+const fifoStream = fs.createReadStream(fifoPath);
 
-  stream.on('end', () => {
-    console.log('FIFO stream ended, reopening in 1 second...');
-    setTimeout(openFifo, 1000); // Try to reopen after a short delay
-  });
-
-  stream.on('error', err => {
-    console.error('FIFO error:', err.message);
-    // If the FIFO does not exist yet, try again soon
-    setTimeout(openFifo, 1000);
-  });
-}
-
-// Start the FIFO reader
-openFifo();
-
-// Create the HTTP server
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end(`Latest sensor reading: ${latestData}`);
+fifoStream.on('data', (chunk) => {
+    latestData = chunk.toString();
+    console.log('Received from pipe:', latestData);
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+
+//attach error event listener
+fifoStream.on('error', (err) => {
+    console.error('Error reading from FIFO:', err.message);
+});
+
+
+// Create the server
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    //update sensor data
+	res.end(latestData);
+});
+
+
+// Define the port and host
+const port = 8080;
+const host = '0.0.0.0';
+
+// Start the server
+server.listen(port, host, () => {
+    console.log(`Server running at http://${host}:${port}/`);
 });
