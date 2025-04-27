@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #this start stop scripts is resposible for showing a simple custom bootslpash
-
+#refrences - https://github.com/buildroot/buildroot/blob/master/package/psplash/Config.in
 case "$1" in
     start)
         psplash &
