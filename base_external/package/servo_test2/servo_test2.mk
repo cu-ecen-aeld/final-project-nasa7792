@@ -4,8 +4,8 @@
 #
 ##############################################################
 
-SERVO_TEST2_VERSION = 1.0
-SERVO_TEST2_SITE = /home/nalin/Desktop/servo_test
+SERVO_TEST2_VERSION = 1.5
+SERVO_TEST2_SITE = /home/nalin/Desktop/AESD_FINAL_PROJECT_TRACKING/motor
 SERVO_TEST2_SITE_METHOD = local
 
 define SERVO_TEST2_BUILD_CMDS
@@ -13,7 +13,7 @@ define SERVO_TEST2_BUILD_CMDS
 endef
 
 define SERVO_TEST2_INSTALL_TARGET_CMDS
-	$(INSTALL) -m 0755 $(@D)/servo $(TARGET_DIR)/usr/bin/servo
+	$(INSTALL) -m 0755 $(@D)/motor $(TARGET_DIR)/usr/bin/motor
 endef
 
 $(eval $(generic-package))

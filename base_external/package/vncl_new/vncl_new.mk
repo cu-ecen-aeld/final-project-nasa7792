@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-VNCL_NEW_VERSION = 2.2
+VNCL_NEW_VERSION = 2.5
 VNCL_NEW_SITE = /home/nalin/Desktop/AESD_FINAL_PROJECT_TRACKING/vncl4040_sensor
 VNCL_NEW_SITE_METHOD = local
 

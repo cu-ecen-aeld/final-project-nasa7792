@@ -5,7 +5,7 @@
 #
 ##############################################################
 
-PINET_DRIVER_VERSION = 3.0
+PINET_DRIVER_VERSION = 3.1
 PINET_DRIVER_SITE = /home/nalin/Desktop/final-project-AbhishekKoppaCU/PiNet-net-driver
 PINET_DRIVER_SITE_METHOD = local
 
