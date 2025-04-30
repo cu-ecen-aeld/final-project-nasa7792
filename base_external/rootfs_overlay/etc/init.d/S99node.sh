@@ -1,4 +1,5 @@
 #!/bin/sh
+#this scripts starts the node js server
 
 SERVER_JS="/usr/bin/server.js"
 

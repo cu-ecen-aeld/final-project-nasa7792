@@ -10,7 +10,7 @@ case "$1" in
         # create An effect of smooth update of progress bar
         for i in $(seq 0 2 100); do
             psplash-write "PROGRESS $i"
-            psplash-write "MSG Loading... $i%"
+            psplash-write "MSG Loading System!... $i%"
             sleep 0.1
         done
 

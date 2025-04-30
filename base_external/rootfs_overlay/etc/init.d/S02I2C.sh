@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#this script Adds i2c modules
 case "$1" in
     start)
         echo "load i2c modules"
